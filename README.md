@@ -32,7 +32,7 @@
 - $\mu_0$: [permeability of free ](https://en.wikipedia.org/wiki/Vacuum_permeability)
 
 
-![img](images/maxwell.png){: style="background-color: 'white'; border-radius: 5"}
+![img](images/maxwell.png){: style="background-color: 'white';"}
 
 
 ### [Navier-Stokes](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations)
