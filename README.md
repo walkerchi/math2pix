@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Math2Pix 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Covert katex math into any kind of images**
 
-## Available Scripts
+*power by walkerchi*
 
-In the project directory, you can run:
+## Example
 
-### `npm start`
+### [Maxwell](https://en.wikipedia.org/wiki/Maxwell%27s_equations) 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```latex
+\begin{aligned}
+\nabla \cdot \boldsymbol E &= \frac{\rho}{\varepsilon_0}
+\\
+\nabla \cdot \boldsymbol B &= 0
+\\
+\nabla \times \boldsymbol E &= -\frac{\partial \boldsymbol B}{\partial t}
+\\
+\nabla \times \boldsymbol B &= \mu_0 (\boldsymbol J + \varepsilon_0\frac{\partial \boldsymbol E}{\partial t})
+\end{aligned}
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+$\boldsymbol E$ : Electric Field (vector field)
+$\boldsymbol B$ : Magnetic Field (pseudovector field)
+$\boldsymbol J$ : current density 
+$\rho$ : charge density
+$\varepsilon_0$ : [permittivity of free space](https://en.wikipedia.org/wiki/Vacuum_permittivity)
+$\mu_0$: [permeability of free ](https://en.wikipedia.org/wiki/Vacuum_permeability)
 
-### `npm test`
+![img](images/maxwell.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### [Navier-Stokes](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```latex
+\begin{aligned}
+\frac{\partial \boldsymbol u}{\partial t}+
+(\boldsymbol u\cdot \nabla)\boldsymbol u - 
+\nu \nabla^2 \boldsymbol u = 
+- \frac{1}{\rho}\nabla p + \boldsymbol g
+\end{aligned}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+$\boldsymbol{ u}$ : flow velocity
+$\rho$ : mass density
+$p$ : pressure
+$\boldsymbol{ g}$: body accerlation on the continuum like gravity
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![img](images/navier-stokes.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### [Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```latex
+\begin{aligned}
+i\hbar\frac{\partial \Psi(x,t)}{\partial t} = 
+\left[-\frac{\hbar^2\partial^2}{2m\partial x^2} + V(x,t) \right] \Psi(x,t)
+\end{aligned}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+$\Psi(x,t)$ : wave function in $\C$
+$V(x,t)$ : potential 
+$\hbar$ : [plank constant](https://en.wikipedia.org/wiki/Planck_constant)
+$i$ : imaginary unit
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![img](images/schrodinger.png)
 
-## Learn More
+### [Black-Scholes](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```latex
+\begin{aligned}
+P(S_t,t) &= N(-d_2)Ke^{-r(T-t)} - N(-d_1)S_T
+\\
+C(S_t, t) &= N(d_1)S_t - N(d_2)Ke^{-r(T-t)}
+\\
+d_1 &= \frac{1}{\sigma\sqrt{T-t}}\left[ln\left(\frac{S_t}{K}\right)+\left(r+\frac{\sigma^2}{2}\right)(T-t)\right]
+\\
+d_2 &= d_1 - \sigma\sqrt{T-t}
+\end{aligned}
+```
+$P(S_t,t)$ : price of a European put(sell) option
+$C(S_t,t)$ : price of a European call(buy) option
+$N(x)$: gaussian  cumulative distribution function(cdf)
+$T$ : time of option expiration 
+$S_t$ : price of the underlying asset at time $t$
+$r$ :  annualized risk-free interest rate
+$K$ :  strike price(fixed price) of the option
+$\sigma$ : standard deviation of the stock's returns
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![img](images/black-scholes.png)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## TODO
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [ ] add highlight syntax
+- [ ] more example
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

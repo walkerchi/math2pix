@@ -19,12 +19,15 @@
 }
 
 .body{
-  width: 100%;
+  width: 90%;
   height: 60%;
   display:flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(45deg, #8942a82c, #0088cc22);
+  box-shadow:0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .math{
@@ -63,6 +66,10 @@
   max-height: 50%;
   overflow: auto;
 }
+.math-image > div{
+  width:auto;
+  height:auto;
+}
 
 .button{
   margin-top: 16px;
@@ -87,6 +94,20 @@
   transform: translateY(-2px);
   color: #2f88ec;
   letter-spacing: 1px;
+}
+.button:hover::before {
+  content: "You can click to download the image 🤗";
+  display: block;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  font-size:10px;
+  padding: 10px;
+  line-height: 12px;
+  background-color: #ffffff43;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: #2f88ec;
 }
 
 
@@ -113,6 +134,7 @@
   letter-spacing: 1px;
 }
 
+
 .container select:focus {
   outline: none;
   border-color: #0088cc;
@@ -126,14 +148,47 @@
   transform: translateY(-2px);
   color: #2f88ec;
   letter-spacing: 1px;
-  cursor:pointer;
+  cursor:pointer; 
+}
+
+
+.github {
+  position: absolute;
+  right:10px;
+  bottom: 10px;
+  transform: scale(0.5);
+  transition: all .3s ease-in-out;
+}
+.github svg path{
+  transition:  all .3s ease-in-out;
   
+}
+.github:hover{
+  transform: scale(0.55);
+}
+.github:hover svg path{
+  fill:#2f88ec;
+}
+.github:before{
+  transform:translate(-50%,-50%);
+}
+.github:hover::before {
+  content: "See more examples on my Github🤗";
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  padding: 10px;
+  background-color: #ffffff38;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: #2f88ec;
 }
 
 @media (max-width: 767px) {
   .body {
     flex-direction: column;
-    height:85%;
+    height:80%;
   }
   .container h1{
     font-size: 40px;
@@ -153,5 +208,17 @@
   .image{
     padding-bottom: 32px;
     height:50%;
+  }
+  .github {
+    right: 0px;
+    bottom: 0px;
+    transform: scale(0.4) translate(60%,60%);
+  }
+  .github:hover{
+    transform: scale(0.45) translate(60%,60%);
+  }
+  .github:hover::before{
+    top:0%; 
+    font-size: 14px;
   }
 }

@@ -8,7 +8,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 import {toSvg, toPng, toJpeg, toBlob} from 'html-to-image'
 import hightlight from 'remark-highlight.js'
-
+import GithubIcon from './svg/Github';
 
 
 import "katex/dist/katex.min.css";
@@ -40,7 +40,7 @@ function App() {
   return (
     <div className={styles.container}>
       <h1>Math 2 Pix</h1>
-        <div className={styles.body}>
+      <div className={styles.body}>
         <textarea id="math" className={styles.math} 
           onChange={e=>{
           console.log(e.target.value)
@@ -57,13 +57,14 @@ function App() {
           </select>
           <div className={styles.button}
             onClick={e=>{
-
+              const ele = document.getElementById("math-image").firstChild
+              // ele.style.overflow = "visible"
               const htmlToImage = {
                 png:toPng,
                 jpg:toJpeg,
                 svg:toSvg
               }[imgType]
-              htmlToImage(document.getElementById("math-image"))
+              htmlToImage(ele,{width:ele.scrollWidth, height:ele.scrollHeight + 20})
               .then((dataURL=>{
                 console.log(dataURL)
                 const link = document.createElement('a')
@@ -72,7 +73,7 @@ function App() {
                 document.body.appendChild(link)
                 link.click()
                 document.body.removeChild(link)
-                
+                // ele.style.overflow = "auto"
               }))
               .catch(function (error) {
                 console.error('Unable to render image', error);
@@ -82,7 +83,10 @@ function App() {
           >Download</div>
           
         </div>
-        </div>
+      </div>
+      <a href="https://github.com/walkerchi/math2pix" className={styles.github}>
+        <GithubIcon/>
+      </a>
     </div>
   );
 }
