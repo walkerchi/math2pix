@@ -111,6 +111,14 @@
 }
 
 
+
+
+.selections{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .container select {
   background-color: #8942a834;
   border: 2px solid #008bba29;

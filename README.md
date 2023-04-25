@@ -32,7 +32,7 @@
 - $\mu_0$: [permeability of free ](https://en.wikipedia.org/wiki/Vacuum_permeability)
 
 
-![img](images/maxwell.png){: style="background-color: 'white';"}
+![img](images/maxwell.png)
 
 
 ### [Navier-Stokes](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations)
@@ -51,7 +51,7 @@
 - $p$ : pressure
 - $\boldsymbol{ g}$: body accerlation on the continuum like gravity
 
-<img src="images/navier-stokes.png" style="background-color:white;border-radius:5px;" />
+![img](images/navier-stokes.png)
 
 
 ### [Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation)
@@ -68,7 +68,7 @@ i\hbar\frac{\partial \Psi(x,t)}{\partial t} =
 - $\hbar$ : [plank constant](https://en.wikipedia.org/wiki/Planck_constant)
 - $i$ : imaginary unit
 
-<img src="images/schrodinger.png" style="background-color:white;border-radius:5px;" />
+![img](images/schrodinger.png)
 
 ### [Black-Scholes](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model)
 
@@ -92,7 +92,7 @@ d_2 &= d_1 - \sigma\sqrt{T-t}
 - $K$ :  strike price(fixed price) of the option
 - $\sigma$ : standard deviation of the stock's returns
 
-<img src="images/black-scholes.png" style="background-color:white;border-radius:5px;" />
+![img](images/black-scholes.png)
 
 
 

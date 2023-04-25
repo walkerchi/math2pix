@@ -19,6 +19,7 @@ function App() {
   const [tex, setTex] = useState('x^2');
   const [html, setHTML] = useState(null);
   const [imgType, setImgType] = useState('png');
+  const [bgColor, setBgColor] = useState('transparent');
 
 
   useEffect(()=>{
@@ -50,11 +51,17 @@ function App() {
         </textarea>
         <div id="image" className={styles.image}>
           <div id="math-image" className={styles["math-image"]} dangerouslySetInnerHTML={{__html:html}}></div>
-          <select onChange={e=>setImgType(e.target.value)}>
-            <option>png</option>
-            <option>jpg</option>
-            <option>svg</option>
-          </select>
+          <div className={styles.selections}>
+            <select onChange={e=>setImgType(e.target.value)}>
+              <option>png</option>
+              <option>jpg</option>
+              <option>svg</option>
+            </select>
+            <select onChange={e=>setBgColor(e.target.value)}>
+              <option>transparent</option>
+              <option>white</option>
+            </select>
+          </div>
           <div className={styles.button}
             onClick={e=>{
               const ele = document.getElementById("math-image").firstChild
@@ -64,7 +71,13 @@ function App() {
                 jpg:toJpeg,
                 svg:toSvg
               }[imgType]
-              htmlToImage(ele,{width:ele.scrollWidth, height:ele.scrollHeight + 20})
+              htmlToImage(ele,{
+                width:ele.scrollWidth, 
+                height:ele.scrollHeight + 20,
+                backgroundColor:bgColor,
+                style:{
+                  "border-radius": "10px"
+                }})
               .then((dataURL=>{
                 console.log(dataURL)
                 const link = document.createElement('a')
