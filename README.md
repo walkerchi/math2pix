@@ -2,7 +2,11 @@
 
 **Covert katex math into any kind of images**
 
-*power by walkerchi*
+---- 
+
+* by walkerchi*
+
+----
 
 ## Example
 
@@ -20,14 +24,14 @@
 \end{aligned}
 ```
 
-$\boldsymbol E$ : Electric Field (vector field)
-$\boldsymbol B$ : Magnetic Field (pseudovector field)
-$\boldsymbol J$ : current density 
-$\rho$ : charge density
-$\varepsilon_0$ : [permittivity of free space](https://en.wikipedia.org/wiki/Vacuum_permittivity)
-$\mu_0$: [permeability of free ](https://en.wikipedia.org/wiki/Vacuum_permeability)
+- $\boldsymbol E$ : Electric Field (vector field)
+- $\boldsymbol B$ : Magnetic Field (pseudovector field)
+- $\boldsymbol J$ : current density 
+- $\rho$ : charge density
+- $\varepsilon_0$ : [permittivity of free space](https://en.wikipedia.org/wiki/Vacuum_permittivity)
+- $\mu_0$: [permeability of free ](https://en.wikipedia.org/wiki/Vacuum_permeability)
 
-![img](images/maxwell.png)
+<img src="images/maxwell.png" style="background-color:white;border-radius:5px;" />
 
 
 ### [Navier-Stokes](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations)
@@ -41,12 +45,12 @@ $\mu_0$: [permeability of free ](https://en.wikipedia.org/wiki/Vacuum_permeabili
 \end{aligned}
 ```
 
-$\boldsymbol{ u}$ : flow velocity
-$\rho$ : mass density
-$p$ : pressure
-$\boldsymbol{ g}$: body accerlation on the continuum like gravity
+- $\boldsymbol{ u}$ : flow velocity
+- $\rho$ : mass density
+- $p$ : pressure
+- $\boldsymbol{ g}$: body accerlation on the continuum like gravity
 
-![img](images/navier-stokes.png)
+<img src="images/navier-stokes.png" style="background-color:white;border-radius:5px;" />
 
 
 ### [Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation)
@@ -58,12 +62,12 @@ i\hbar\frac{\partial \Psi(x,t)}{\partial t} =
 \end{aligned}
 ```
 
-$\Psi(x,t)$ : wave function in $\C$
-$V(x,t)$ : potential 
-$\hbar$ : [plank constant](https://en.wikipedia.org/wiki/Planck_constant)
-$i$ : imaginary unit
+- $\Psi(x,t)$ : wave function in $\mathbb C$
+- $V(x,t)$ : potential 
+- $\hbar$ : [plank constant](https://en.wikipedia.org/wiki/Planck_constant)
+- $i$ : imaginary unit
 
-![img](images/schrodinger.png)
+<img src="images/schrodinger.png" style="background-color:white;border-radius:5px;" />
 
 ### [Black-Scholes](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model)
 
@@ -78,16 +82,16 @@ d_1 &= \frac{1}{\sigma\sqrt{T-t}}\left[ln\left(\frac{S_t}{K}\right)+\left(r+\fra
 d_2 &= d_1 - \sigma\sqrt{T-t}
 \end{aligned}
 ```
-$P(S_t,t)$ : price of a European put(sell) option
-$C(S_t,t)$ : price of a European call(buy) option
-$N(x)$: gaussian  cumulative distribution function(cdf)
-$T$ : time of option expiration 
-$S_t$ : price of the underlying asset at time $t$
-$r$ :  annualized risk-free interest rate
-$K$ :  strike price(fixed price) of the option
-$\sigma$ : standard deviation of the stock's returns
+- $P(S_t,t)$ : price of a European put(sell) option
+- $C(S_t,t)$ : price of a European call(buy) option
+- $N(x)$: gaussian  cumulative distribution function(cdf)
+- $T$ : time of option expiration 
+- $S_t$ : price of the underlying asset at time $t$
+- $r$ :  annualized risk-free interest rate
+- $K$ :  strike price(fixed price) of the option
+- $\sigma$ : standard deviation of the stock's returns
 
-![img](images/black-scholes.png)
+<img src="images/black-scholes.png" style="background-color:white;border-radius:5px;" />
 
 
 
