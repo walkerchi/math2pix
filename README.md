@@ -2,9 +2,9 @@
 
 **Covert katex math into any kind of images**
 
----- 
+----
 
-* by walkerchi*
+- by walkerchi
 
 ----
 
@@ -31,7 +31,7 @@
 - $\varepsilon_0$ : [permittivity of free space](https://en.wikipedia.org/wiki/Vacuum_permittivity)
 - $\mu_0$: [permeability of free ](https://en.wikipedia.org/wiki/Vacuum_permeability)
 
-<img src="images/maxwell.png" style="background-color:white;border-radius:5px;" />
+<img src="images/maxwell.png" background-color="white" border-radius=5/>
 
 
 ### [Navier-Stokes](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations)
